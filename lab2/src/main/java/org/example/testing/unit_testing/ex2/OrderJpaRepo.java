@@ -1,0 +1,11 @@
+package org.example.testing.unit_testing.ex2;
+
+import org.example.testing.unit_testing.ex1.Orders;
+import org.springframework.context.annotation.Profile;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+@Profile("unit-testing-ex2")
+public interface OrderJpaRepo extends JpaRepository<Orders, Integer> {
+}
